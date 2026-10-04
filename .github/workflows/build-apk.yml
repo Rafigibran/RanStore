@@ -45,6 +45,9 @@ jobs:
           flutter create .             --platforms=android             --org=com.ranstore             --project-name=ranstore             --no-pub
           chmod +x android/gradlew
 
+      - name: Remove generated template test
+        run: rm -rf test
+
       - name: Get dependencies
         run: flutter pub get
 
