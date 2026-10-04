@@ -28,7 +28,7 @@ class _ScanQrScreenState extends State<ScanQrScreen> {
               if (!mounted) return;
               context.pop();
               ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text('QR terbaca: ' + raw)),
+                SnackBar(content: Text('QR terbaca: $raw)),
               );
             },
           ),
