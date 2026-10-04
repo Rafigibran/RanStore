@@ -29,7 +29,7 @@ class HomeScreen extends ConsumerWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Halo, ' + account.name,
+                      Text('Halo, ${account.name}',
                           style: Theme.of(context).textTheme.titleLarge),
                       const SizedBox(height: 4),
                       const Text('Semua kebutuhan digital dalam satu aplikasi.'),
