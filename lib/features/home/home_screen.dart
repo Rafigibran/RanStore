@@ -63,7 +63,7 @@ class HomeScreen extends ConsumerWidget {
                     children: [
                       Expanded(
                         child: Text(
-                          visible ? 'Rp ' + account.balance.toString() : '••••••••',
+                          visible ? 'Rp ${account.balance}' : '••••••••',
                           style: const TextStyle(
                             color: Colors.white,
                             fontSize: 28,
@@ -85,7 +85,7 @@ class HomeScreen extends ConsumerWidget {
                     children: [
                       const Icon(Icons.stars_rounded, color: Colors.white),
                       const SizedBox(width: 8),
-                      Text(account.points.toString() + ' Poin',
+                      Text('${account.points} Poin',
                           style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w700)),
                       const Spacer(),
                       TextButton(
