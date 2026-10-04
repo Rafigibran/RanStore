@@ -6,5 +6,5 @@ class _DisbursementScreenState extends State<DisbursementScreen>{ String channel
  const Text('Transfer ke Bank / E-Wallet',style:TextStyle(fontSize:22,fontWeight:FontWeight.w800)),const SizedBox(height:8),const Text('Fitur demo untuk alur penarikan saldo.'),const SizedBox(height:20),
  SegmentedButton<String>(segments:const [ButtonSegment(value:'Bank',label:Text('Bank'),icon:Icon(Icons.account_balance_outlined)),ButtonSegment(value:'E-Wallet',label:Text('E-Wallet'),icon:Icon(Icons.wallet_outlined))],selected:{channel},onSelectionChanged:(v)=>setState(()=>channel=v.first)),const SizedBox(height:16),
  TextField(controller:amount,keyboardType:TextInputType.number,decoration:const InputDecoration(prefixText:'Rp ',labelText:'Nominal penarikan')),const SizedBox(height:20),
- FilledButton(onPressed:(){showDialog(context:context,builder:(_)=>AlertDialog(title:const Text('Permintaan dibuat'),content:Text('Demo ' + channel + ' Rp ' + amount.text + '.'),actions:[TextButton(onPressed:()=>Navigator.pop(context),child:const Text('Tutup'))]));},child:const Text('Lanjutkan'))
+ FilledButton(onPressed:(){showDialog(context:context,builder:(_)=>AlertDialog(title:const Text('Permintaan dibuat'),content:Text('Demo $channel Rp ${amount.text}.'),actions:[TextButton(onPressed:()=>Navigator.pop(context),child:const Text('Tutup'))]));},child:const Text('Lanjutkan'))
 ]));}
